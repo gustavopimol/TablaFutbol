@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>	</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style >
+  .conatiner-fluid{
+    background: url(img/resgis.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  .fa-home{
+      color: #ff6b6b;
+  } 
+  .btn-danger{
+      font-size: 20px;
+  }
+</style>
+</head>
+<body >
+	<div class="conatiner-fluid ">
+    <div class="row">
+        <div class="col-12 " >
+                    <ul class="nav justify-content-center navbar  navbar-expand-lg navbar-dark bg-dark ">
+                       <li class="nav-item active">
+                          <a class="nav-link m-1" href="index.html">            
+                          <span class="sr-only">(current)</span><i class="fas fa-home fa-2x font-weight-bold font-italic"></i> </a>
+                        </li>
+                        <li class="nav-item">
+                          <h3><a class="nav-link active text-white font-weight-bold font-italic" href="registrarse.html">REGISTRO</a></h3>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                          <h3><a class="nav-link text-white font-weight-bold  font-italic" href="posiciones.php">POSICIONES</a></h3>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                        </li>
+                    </ul>
+      </div>
+    </div>
+		<div class="row m-0">
+            <div class="col-3"></div>
+			      <div class="col-6 shadow-lg  my-5 rounded bg-dark">
+				        <form method="post" action="grabarregistrar.php" onsubmit="return isValid()">
+                    <br>
+                    <div class="row">
+                        <div class="col-12 ">
+                    	     <h1 class="text-center text-danger font-weight-bold ">REGISTRO</h1>
+                        </div> 
+                    </div><br><br>
+                  <div class="row">
+                        <div class="col-12 col-xl-5">  
+                            <div class="row">
+                                <div class="col-12"><h3 class=" bg-warning text-dark text-center font-weight-bold font-italic">LOCAL</h3></div>
+                            </div> <br>
+					                  <div class="form-row ">
+                                 <label for="" class="col-sm-1 col-form-label text-white font-weight-bold "> </label>
+					                       <label for="" class="col-sm-3 col-form-label text-white font-weight-bold ">Equipo: </label>
+                                 <div class="col-sm-7">
+                                     <select name="cbxequiposlocales" class="form-control bg-secondary text-white font-italic" id = "cbxequiposlocales">
+                                         <option selected="" >   Escoger...</option>
+                                         <option value="1"  >Ajax</option>
+                                         <option value="2">Atlanta</option>
+                                         <option value="3">Atletico Madrid</option>
+                                         <option value="4">Borussia Dortmund</option>
+                                         <option value="5">Barcelona</option>
+                                         <option value="6">Bayern Múnich</option>
+                                         <option value="7">Benfica</option>
+                                         <option value="8">Brujas</option>
+                                         <option value="9">Celtic</option>
+                                         <option value="10">Chelsea</option>
+                                         <option value="11">Galatasaray</option>
+                                         <option value="12">Inter</option>
+                                         <option value="13">Juventus</option>
+                                         <option value="14">Liverpool</option>
+                                         <option value="15">Lokomotiv</option>
+                                         <option value="16">Lyon</option>
+                                         <option value="17">M. City</option>
+                                         <option value="18">Nápoles</option>
+                                         <option value="19">Oporto</option>
+                                         <option value="20">PSG</option>
+                                         <option value="21">Real Madrid</option>
+                                         <option value="22">Salzburgo</option>
+                                         <option value="23">Tottenham</option>
+                                         <option value="24">Valencia</option>                       
+                                     </select>
+                                </div>
+                            </div><br>
+  
+                     <div class="form-row ">
+                         <label for="inputState" class="col-sm-1 col-form-label text-white font-weight-bold "> </label>
+                     	<label for="inputZip" class="col-sm-3 col-form-label text-white font-weight-bold ">Goles: </label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control bg-secondary text-white" name="txtgoleslocales" required="">
+                         </div>
+                     </div>
+                     </div>
+                     <div class="col-12 col-xl-2 text-center text-warning font-weight-bold mt-5 mb-5"><h1>V.S</h1></div>
+
+                    <div class="col-12 col-xl-5">
+                      <div class="row">
+                  <div class="col-12"><h3 class=" bg-warning text-dark text-center font-weight-bold font-italic">VISITA</h3></div>
+                  </div> <br>
+                    <div class="form-row  ">
+                    	<label for="" class="col-sm-1 col-form-label text-white font-weight-bold"> </label>
+                        
+                       <label for="inputState" class="col-sm-3 col-form-label text-white font-weight-bold">Equipo: </label>
+                         <div class="col-sm-7">
+                           <select name="cbxequiposvisitantes" class="form-control bg-secondary text-white font-italic" required="" id ="cbxequiposvisitantes">
+                              <option selected="">Escoger...</option>
+                              <option value="1" >Ajax</option>
+                              <option value="2">Atlanta</option>
+                              <option value="3">Atletico Madrid</option>
+                              <option value="4">Borussia Dortmund</option>
+                              <option value="5">Barcelona</option>
+                              <option value="6">Bayern Múnich</option>
+                              <option value="7">Benfica</option>
+                              <option value="8">Brujas</option>
+                              <option value="9">Celtic</option>
+                              <option value="10">Chelsea</option>
+                              <option value="11">Galatasaray</option>
+                              <option value="12">Inter</option>
+                              <option value="13">Juventus</option>
+                              <option value="14">Liverpool</option>
+                              <option value="15">Lokomotiv</option>
+                              <option value="16">Lyon</option>
+                              <option value="17">M. City</option>
+                              <option value="18">Nápoles</option>
+                              <option value="19">Oporto</option>
+                              <option value="20">PSG</option>
+                              <option value="21">Real Madrid</option>
+                              <option value="22">Salzburgo</option>
+                              <option value="23">Tottenham</option>
+                              <option value="24">Valencia</option>
+                             
+                           </select>
+                         </div>
+                    </div><br>
+  
+                     <div class="form-row ">
+                     	<label for="" class="col-sm-1 col-form-label text-white font-weight-bold"> </label>
+                        
+                        <label for="inputZip" class="col-sm-3 col-form-label text-white font-weight-bold">Goles: </label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control bg-secondary text-white" name="txtgolesvisitantes" required="">
+                         </div>
+                     </div>
+                     </div>
+                      </div><br><br><br>
+                     <div class="row">
+                        <div class=" col-12 text-center mb-5">
+                            <button type="submit" class="btn btn-danger font-weight-bold ">GRABAR</button>
+                        </div>
+                      </div>
+                </form>
+			      </div>
+		</div>
+    <footer class="row">
+      <div class="col-12 text-white text-center bg-dark mt-4 py-2">
+           <p>Autor: Piminchumo Olivos Gustavo Enrique</p>
+            <p>© Copyright 2019 </p>
+      </div>
+    </footer>
+	</div>
+  <script Language="JavaScript">
+
+    function isValid()
+    {
+       if ($("#cbxequiposlocales").val() == $("#cbxequiposvisitantes").val()) {
+          alert("Seleccionar equipos diferentes");
+          return false;
+      }
+      return true;
+ 
+    }
+ </script>
+ <script src="js/jquery-3.3.1.slim.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</body>
+</html>
